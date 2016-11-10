@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "f0cc37bc-c3dd-4df9-ae72-28387efe926e",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "tile_stone": {
+      "ver": "1.0.3",
+      "uuid": "bc2b6f26-e9c0-43c2-a50d-66a2f5746c1c",
+      "rawTextureUuid": "f0cc37bc-c3dd-4df9-ae72-28387efe926e",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 140,
+      "height": 140,
+      "rawWidth": 140,
+      "rawHeight": 140,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "sources": [
+    "unknown"
+  ],
+  "names": [],
+  "mappings": "AAAA,EAAE,CAAC,KAAK,CAAC;AACL,eAAS,EAAE,CAAC,SAAS;;AAErB,cAAU,EAAE;;AAER,qBAAa,EAAG,EAAE;AAClB,oBAAY,EAAG,EAAE;AACjB,cAAM,EAAG,EAAE;AACX,WAAG,EAAG,EAAE;;AAER,YAAI,EAAG,EAAE;;KAEZ;;AAED,WAAO,EAAE,mBAAU;AACf,YAAI,CAAC,YAAY,CAAC,EAAE,CAAC,SAAS,CAAC,CAAC,IAAI,CAAC,IAAI,CAAC,aAAa,GAAG,IAAI,CAAC,MAAM,CAAC,CAAC;KAC1E;;AAED,UAAM,EAAE,kBAAU;;AAEd,YAAI,IAAI,GAAG,IAAI,CAAC,IAAI,CAAC,KAAK,EAAE,CAAC;AAC7B,YAAG,IAAI,IAAI,SAAS,EAAE,OAAO;AAC7B,YAAI,CAAC,GAAG,GAAG,IAAI,CAAC,EAAE,GAAG,EAAE,GAAG,IAAI,CAAC,EAAE,CAAC;;AAElC,YAAG,IAAI,CAAC,GAAG,IAAI,IAAI,CAAC,MAAM,EAAE,OAAO;AACnC,YAAI,CAAC,MAAM,GAAG,IAAI,CAAC,GAAG,CAAC;AACvB,YAAI,CAAC,YAAY,CAAC,EAAE,CAAC,SAAS,CAAC,CAAC,IAAI,CAAC,IAAI,CAAC,YAAY,GAAG,IAAI,CAAC,GAAG,CAAC,CAAC;KACtE;;AAED,UAAM,EAAE,kBAAY,EAEnB;;CAMJ,CAAC,CAAC",
+  "file": "unknown",
+  "sourcesContent": [
+    "cc.Class({\r\n    extends: cc.Component,\r\n\r\n    properties: {\r\n       \r\n        StandAnimName : '',\r\n        WalkAnimName : '',\r\n        curDir : '',\r\n        dir : '',\r\n        \r\n        path : [],\r\n\r\n    },\r\n    \r\n    toStand: function(){\r\n        this.getComponent(cc.Animation).play(this.StandAnimName + this.curDir);\r\n    },\r\n    \r\n    toWalk: function(){\r\n        \r\n        var item = this.path.shift();\r\n        if(item == undefined) return;\r\n        this.dir = item.dx + '' + item.dy;\r\n        \r\n        if(this.dir == this.curDir) return;\r\n        this.curDir = this.dir;\r\n        this.getComponent(cc.Animation).play(this.WalkAnimName + this.dir);\r\n    },\r\n    // use this for initialization\r\n    onLoad: function () {\r\n\r\n    },\r\n\r\n    // called every frame, uncomment this function to activate update callback\r\n    // update: function (dt) {\r\n\r\n    // },\r\n});\r\n"
+  ]
+}

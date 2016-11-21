@@ -1,0 +1,17 @@
+{
+  "excludeScenes": [],
+  "includeAnySDK": false,
+  "includeSdk": [
+    "anysdk"
+  ],
+  "orientation": {
+    "landscapeLeft": true,
+    "landscapeRight": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "packageName": "org.cocos2d.pubbleExport",
+  "startScene": "ead5bc2e-555a-45ca-b64a-fb1c9535af41",
+  "title": "pubbleExport",
+  "webOrientation": "auto"
+}

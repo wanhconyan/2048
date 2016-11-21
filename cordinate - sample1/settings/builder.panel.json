@@ -1,0 +1,8 @@
+{
+  "excludeScenes": [],
+  "packageName": "org.cocos2d.cordinate - sample1",
+  "platform": "web-desktop",
+  "startScene": "0b08c81e-b102-411b-a3af-a6b6df86cae6",
+  "startSceneUuid": "0b08c81e-b102-411b-a3af-a6b6df86cae6",
+  "title": "cordinate - sample1"
+}

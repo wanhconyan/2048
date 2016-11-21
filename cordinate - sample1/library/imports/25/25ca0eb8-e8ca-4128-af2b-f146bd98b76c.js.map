@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "sources": [
+    "unknown"
+  ],
+  "names": [],
+  "mappings": "AAAA,EAAE,CAAC,KAAK,CAAC;AACL,eAAS,EAAE,CAAC,SAAS;;AAErB,cAAU,EAAE;;AAER,qBAAa,EAAG,EAAE;AAClB,oBAAY,EAAG,EAAE;AACjB,cAAM,EAAG,EAAE;;KAGd;;AAED,WAAO,EAAE,mBAAU;AACf,YAAI,CAAC,YAAY,CAAC,EAAE,CAAC,SAAS,CAAC,CAAC,IAAI,CAAC,IAAI,CAAC,aAAa,GAAG,IAAI,CAAC,MAAM,CAAC,CAAC;KAC1E;;AAED,UAAM,EAAE,gBAAS,GAAG,EAAC;;AAEjB,YAAG,GAAG,IAAI,IAAI,CAAC,MAAM,EAAE,OAAO;AAC9B,YAAI,CAAC,MAAM,GAAG,GAAG,CAAC;AAClB,YAAI,CAAC,YAAY,CAAC,EAAE,CAAC,SAAS,CAAC,CAAC,IAAI,CAAC,IAAI,CAAC,YAAY,GAAG,GAAG,CAAC,CAAC;KACjE;;AAED,UAAM,EAAE,kBAAY,EAEnB;;CAMJ,CAAC,CAAC",
+  "file": "unknown",
+  "sourcesContent": [
+    "cc.Class({\r\n    extends: cc.Component,\r\n\r\n    properties: {\r\n       \r\n        StandAnimName : '',\r\n        WalkAnimName : '',\r\n        curDir : '',\r\n        \r\n\r\n    },\r\n    \r\n    toStand: function(){\r\n        this.getComponent(cc.Animation).play(this.StandAnimName + this.curDir);\r\n    },\r\n    \r\n    toWalk: function(dir){\r\n        //console.log(dir);\r\n        if(dir == this.curDir) return;\r\n        this.curDir = dir;\r\n        this.getComponent(cc.Animation).play(this.WalkAnimName + dir);\r\n    },\r\n    // use this for initialization\r\n    onLoad: function () {\r\n\r\n    },\r\n\r\n    // called every frame, uncomment this function to activate update callback\r\n    // update: function (dt) {\r\n\r\n    // },\r\n});\r\n"
+  ]
+}

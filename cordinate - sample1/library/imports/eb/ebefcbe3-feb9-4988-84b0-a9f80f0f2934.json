@@ -1,0 +1,104 @@
+{
+  "__type__": "cc.SpriteAtlas",
+  "_name": "hero100.plist",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_spriteFrames": {
+    "hero0000": {
+      "__uuid__": "68c832cd-11b7-47db-8517-d57852a80166"
+    },
+    "hero0001": {
+      "__uuid__": "9e36ac3b-c1a5-48c7-b8aa-facc38fd6fa6"
+    },
+    "hero0002": {
+      "__uuid__": "69bc1616-e8e5-4eaf-b036-b746a1d5d89c"
+    },
+    "hero0003": {
+      "__uuid__": "be4d4488-703b-4e50-8b8c-e161ca10caaa"
+    },
+    "hero1000": {
+      "__uuid__": "46d2b9b9-2ea8-4a92-bb51-847f52fa040b"
+    },
+    "hero1001": {
+      "__uuid__": "98f9cdf6-8c6c-4d1d-b8d2-5cb433f68aaf"
+    },
+    "hero1002": {
+      "__uuid__": "8021ea5a-6248-473c-98e3-6507accd23dc"
+    },
+    "hero1003": {
+      "__uuid__": "a69b122b-1bab-4caa-a0b5-810065f948ac"
+    },
+    "hero2000": {
+      "__uuid__": "058113b7-bc47-4f0b-a474-d043fb598e06"
+    },
+    "hero2001": {
+      "__uuid__": "e359acb7-ddc0-45f5-999d-4d444c06afaa"
+    },
+    "hero2002": {
+      "__uuid__": "efadfc43-94ca-4d4d-91b8-eaf0ffcfcb95"
+    },
+    "hero2003": {
+      "__uuid__": "d8278121-ed4c-44d4-aff3-af3f2b8eb271"
+    },
+    "hero3000": {
+      "__uuid__": "19090198-741b-45b5-b687-97bb2219df16"
+    },
+    "hero3001": {
+      "__uuid__": "80bb6e01-adf5-4fb7-b97d-d6f9772b7310"
+    },
+    "hero3002": {
+      "__uuid__": "bb0a26c8-38af-4a68-8564-bce0e438a015"
+    },
+    "hero3003": {
+      "__uuid__": "f0cd9448-8797-4bad-8a8a-b1a714c8cca3"
+    },
+    "hero4000": {
+      "__uuid__": "5a9eca57-c703-4c21-b3d5-afcccc7282d6"
+    },
+    "hero4001": {
+      "__uuid__": "5c4e2bf0-7e24-4d2f-a203-c9d748cc6ebb"
+    },
+    "hero4002": {
+      "__uuid__": "b84ba1d8-b401-4e4e-8b1d-3d05f94ee003"
+    },
+    "hero4003": {
+      "__uuid__": "cb84b1eb-cfd3-4ead-8f9a-bbd76266fa03"
+    },
+    "hero5000": {
+      "__uuid__": "8675c64c-b7cd-4c22-9a92-07ccf51a689e"
+    },
+    "hero5001": {
+      "__uuid__": "0c31d1b8-21ed-42bb-b3ee-f482aee86530"
+    },
+    "hero5002": {
+      "__uuid__": "bcd56d8d-5ded-46a0-b623-3c5b8c8bd7c7"
+    },
+    "hero5003": {
+      "__uuid__": "91107bc1-31aa-44fb-b167-52625a5d84f0"
+    },
+    "hero6000": {
+      "__uuid__": "4424c48b-8d54-43e8-8a12-fd120c50a596"
+    },
+    "hero6001": {
+      "__uuid__": "3d9f1fde-2ccd-4314-9f40-e67a347f8ab8"
+    },
+    "hero6002": {
+      "__uuid__": "ec901b29-8d78-4f3e-9513-21d21e1c5661"
+    },
+    "hero6003": {
+      "__uuid__": "5a73c390-c6ff-41a0-8789-21cc67ce5ae8"
+    },
+    "hero7000": {
+      "__uuid__": "afe5d4aa-3519-449f-8ea8-b79a36f661b0"
+    },
+    "hero7001": {
+      "__uuid__": "16bb3e7a-e9a6-4aab-9aef-ad29d10f6d65"
+    },
+    "hero7002": {
+      "__uuid__": "9a934d6e-1633-4d8e-89a7-0ebdc2c95a37"
+    },
+    "hero7003": {
+      "__uuid__": "ef3eaf98-d7b1-4c84-af04-699819c08c57"
+    }
+  }
+}

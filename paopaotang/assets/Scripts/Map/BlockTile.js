@@ -43,7 +43,7 @@ cc.Class({
                 [0,16,0,0,0,6,0,0,17,16],
                 [0,16,0,0,0,6,0,0,17,16],
                 [0,16,0,0,0,6,6,0,16,0],
-                 [0,0,0,0,0,0,0,0,0,0]
+                [0,0,0,0,0,0,0,0,0,0]
             ],
              [
                 [0,0,0,6,0,0,0,16,17,6],
@@ -74,13 +74,14 @@ cc.Class({
 
 
      //手动创建tileMap背景层
-    initBlockByPass:function(pass,node)
+    initBlockByPass:function(pass,node,blocks)
     {
         let blockInfo = this.blocks[pass];
         let len = blockInfo.length ;
         for(var i = 0 ; i < len ; i ++)
         {
             let leng = blockInfo[i].length ;
+            blocks[i] = [];
             for(var j = 0 ; j < leng ; j ++)
             {
                 var style = blockInfo[j][i] ;
@@ -92,6 +93,7 @@ cc.Class({
                 var nodeCode = block.getComponent("Block");
                 nodeCode.setBoxStyle(style);
                 nodeCode.setPostion(i,j);
+                blocks[i][j] = nodeCode ;
             }
         }
     }

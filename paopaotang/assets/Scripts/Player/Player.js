@@ -9,6 +9,11 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
+      lbl_pos:
+      {
+          type : cc.Label,
+          default:null
+      },
        direction:cc.Integer,
        speed:1,
        i:0,
@@ -17,36 +22,46 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-        this.defX = -264 ;
-        this.defY =  380 ;
-        this.defW =  66 ;
-        this.defH =  76 ;
+        this.defX = -272 ;
+        this.defY =  362 ;
+        this.defW =  44 ;
+        this.defH =  56 ;
+        this.moveLen = 60 ;
         this.heroAtlas = {};
         this.walks= [[],[0,-1],[0,1],[-1,0],[1,0]];
         this.action = ["","hero_up","hero_down","hero_right","hero_left"];
     },
 
     //移动
-    move:function(i,j,direction)
+    move:function(direction)
     {
         var walk = this.walks[direction];
-        var offsetx = walk[0] ;
-        var offsety = walk[1] ;
-        this.i += walk[0] ;
-        this.j += walk[1] ;
-        this.node.x = this.defX + this.i * this.defW ;
-        this.node.y = this.defY - this.j * this.defH ;
+        var offsetx = this.i  + walk[0] ;
+        var offsety =  this.j  + walk[1] ;
+        this.moveTo(offsetx,offsety,direction);
+    },
+
+    changeDirection:function(direction)
+    {
         var key = this.action[direction];
         this.play(key);
-        console.log("pos"+this.node.x ,this.node.y);
+    },
+
+    bomb:function()
+    {
+        console.log("player is bombed")
 
     },
 
-    //放置炸弹
-    putBomb:function()
+
+    moveTo:function(i,j,direction)
     {
-
-
+        this.i = i ;
+        this.j = j ;
+        this.lbl_pos.string = i + "," + j ;
+        this.changeDirection(direction);
+        this.node.x = this.defX + this.i * this.moveLen ;
+        this.node.y = this.defY - this.j * this.moveLen ;
     },
 
     //被攻击
@@ -76,7 +91,7 @@ cc.Class({
     initPlayerWithUrl:function(url)
     {
         let self = this ;
-        if(url == undefined || url == "")
+        if(url === undefined || url === "")
         {
             url = "Hero/heroAltas" ;
         }
@@ -84,6 +99,7 @@ cc.Class({
         self.animation.active = true ;
         cc.loader.loadRes(url, cc.SpriteAtlas, (err, atlas) => {
         self.heroAtlas = atlas ;
+        this.node.emit("loadComplete"); //通知资源加载完成
         this.play("hero_up");
      });
 

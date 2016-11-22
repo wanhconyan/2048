@@ -2553,7 +2553,8 @@
     "_enabled": true,
     "blockTile": {
       "__uuid__": "c1af6321-3a63-4aab-955e-642e55422d99"
-    }
+    },
+    "blocks": []
   },
   {
     "__type__": "19b33SsvM9HZb+AWkV11aH/",
@@ -2568,7 +2569,8 @@
     },
     "bombPrefab": {
       "__uuid__": "379104ae-d6df-4508-b755-ae5c30b0cad7"
-    }
+    },
+    "maxLen": 10
   },
   {
     "__type__": "cc.Canvas",

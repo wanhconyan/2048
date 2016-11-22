@@ -2,7 +2,8 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-       blockTile:cc.Prefab
+       blockTile:cc.Prefab,
+       blocks:[]
     },
 
     // use this for initialization
@@ -18,6 +19,6 @@ cc.Class({
             this.blockTile.parent = this.node ;
         }
         var blockTileCode = this.blockTile.getComponent("BlockTile");
-        blockTileCode.initBlockByPass(currentPass,this.node);
+        blockTileCode.initBlockByPass(currentPass,this.node,this.blocks);
     }
 });

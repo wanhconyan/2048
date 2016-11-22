@@ -14,15 +14,14 @@ cc.Class({
        },
        i : 0 ,
        j : 0 , 
-       bombTime:4,//爆炸事件
+       bombTime:3000,//爆炸事件
+       boomWidth:60
     },
 
     
     onLoad: function () {
         this.defX = -264 ;
         this.defY =  380 ;
-        this.defW =  66 ;
-        this.defH =  76 ;
         this.walks= [[],[0,-1],[0,1],[-1,0],[1,0]];
         this.types = ["Hero/bomb","Hero/bomb","Hero/bomb","Hero/bomb1","Hero/bomb1","Hero/bomb1"];
     },
@@ -34,8 +33,8 @@ cc.Class({
     {
         this.i = i ;
         this.j = j ;
-        this.node.x = this.defX + this.i * this.defW ;
-        this.node.y = this.defY - this.j * this.defH ;
+        this.node.x = this.defX + this.i * this.boomWidth ;
+        this.node.y = this.defY - this.j * this.boomWidth ;
         console.log("bomb"+this.node.x,this.node.y,i,j);
         let self = this ;
         var url = this.types[type];
@@ -72,7 +71,7 @@ cc.Class({
             this.createAnimationClips(key,4);
         }
         this.animation.play(key);
-        setTimeout(self.bombThisMine,1000,this) ;
+        setTimeout(self.bombThisMine,2000,this) ;//问题 使用申明的参数回导致下一次的延迟时间为0 
     },
 
 
@@ -93,6 +92,12 @@ cc.Class({
     dispose:function()
     {
         // this.destory();
+    },
+
+    bomb:function() //该写个基类 所有可以被伤害的对象都继承此对象
+    {
+        this.node.active =  false;
+        this.dispose();
     },
 
 

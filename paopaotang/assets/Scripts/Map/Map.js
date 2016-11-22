@@ -28,7 +28,8 @@ cc.Class({
     //移动
     move:function(direction)
     {
-        this.playerLayer.moveTo(0,0,direction);
+        var blocks = this.blockLayer.blocks ;
+        this.playerLayer.moveTo(direction,blocks);
     },
 
     //放置炸弹

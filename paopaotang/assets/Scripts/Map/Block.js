@@ -5,11 +5,16 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
+        pos:
+        {
+            type:cc.Label,
+            default:null            
+        },
         rewardType:-1,
         defX:-270,
         defY:361,
         defW:60,
-        defH:66,
+        defH:60,
     },
 
     // use this for initialization
@@ -45,6 +50,12 @@ cc.Class({
 
     },    
 
+    bomb:function()
+    {
+        console.log("block is bombed")
+
+    },
+
     //播放爆炸特效
     playBombEffect:function()
     {
@@ -72,7 +83,7 @@ cc.Class({
     {
         let self = this ;
         var sprite = self.getComponent(cc.Sprite);
-        cc.loader.loadRes("Map/block/blockAltas", cc.SpriteAtlas, function (err, atlas) {
+        cc.loader.loadRes("Map/block/block", cc.SpriteAtlas, function (err, atlas) {
         var frame = atlas.getSpriteFrame('box'+style);
         sprite.spriteFrame = frame;
         self.resize(sprite.spriteFrame.getRect())
@@ -95,6 +106,7 @@ cc.Class({
     {
       this.node.x = i * this.defW + this.defX ;
       this.node.y= -j * this.defH + this.defY ;
+      this.pos.string = i + "," + j ;
     },
 
 });

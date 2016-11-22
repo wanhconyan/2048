@@ -13,6 +13,7 @@ cc.Class({
              this.revivePos = [
             [10,9],[10,9],[10,9],[10,9],[10,9]
             ];
+            this.walks= [[],[0,1],[0,-1],[-1,0],[1,0]];
         }
     },
 
@@ -34,9 +35,9 @@ cc.Class({
     {
         var pos = {x:0,y:0 } ;
         pos.x = this.player.defX + i * this.player.width ;
-        pos.y = this.player.defY + j * this.player.height ;
-        pos.x = 0 ;
-        pos.y = 0 ;
+        pos.y = this.player.defY - j * this.player.height ;
+        // pos.x = 0 ;
+        // pos.y = 0 ;
         return pos ;
     },
 
@@ -65,10 +66,22 @@ cc.Class({
         var bomb = cc.instantiate(this.bombPrefab);
         var bombCode = bomb.getComponent("Bomb");
         bomb.parent = this.node ;
-        bomb.x = 40 ;
-        bomb.y = 40 ;
+        bomb.on("boomRound",this.boomRound)
         bombCode.initBombWith(this.playerCode.i,this.playerCode.j,0);
-    }
+    },
 
+    //爆炸范围
+    boomRound:function(event)
+    {
+        var boom = event.target ;
+        console.log("boomRound") ;
+     
+        var boomCode = boom.getComponent("Bomb");
+        var round = boomCode.getBoomRound();
+        boom.active =  false;
+        boomCode.dispose();
+        var boomCenter = [bombCode.i,bombCode.j];
+        console.log(boomCenter);
+    }
     
 });

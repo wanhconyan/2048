@@ -76,7 +76,7 @@
     "_enabled": true,
     "_defaultClip": null,
     "_clips": [],
-    "playOnLoad": false
+    "playOnLoad": true
   },
   {
     "__type__": "36d8cqGRRFCj64n+RA9ztl9",
@@ -124,7 +124,7 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "39511YflbZJ1rV0DPtUrkvf",
+    "fileId": "b36edWL7Z1IkaYL9fB6xQqF",
     "sync": false
   }
 ]

@@ -17,25 +17,28 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-        this.defX = -282 ;
-        this.defY = 390 ;
+        this.defX = -264 ;
+        this.defY =  380 ;
+        this.defW =  66 ;
+        this.defH =  76 ;
         this.heroAtlas = {};
-        this.walks= [[],[0,1],[0,-1],[-1,0],[1,0]];
+        this.walks= [[],[0,-1],[0,1],[-1,0],[1,0]];
         this.action = ["","hero_up","hero_down","hero_right","hero_left"];
     },
 
     //移动
     move:function(i,j,direction)
     {
-        this.i = i ;
-        this.j = j ;
-        this.node.x = this.defX + i * this.node.width ;
-        this.node.y = this.defY - j * this.node.height ;
+        var walk = this.walks[direction];
+        var offsetx = walk[0] ;
+        var offsety = walk[1] ;
+        this.i += walk[0] ;
+        this.j += walk[1] ;
+        this.node.x = this.defX + this.i * this.defW ;
+        this.node.y = this.defY - this.j * this.defH ;
         var key = this.action[direction];
         this.play(key);
-        var walk = this.walks[direction];
-        this.node.x += walk[0]*this.node.width;
-        this.node.y += walk[1]*this.node.height;
+        console.log("pos"+this.node.x ,this.node.y);
 
     },
 

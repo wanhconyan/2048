@@ -4,7 +4,9 @@ cc.Class({
     properties: {
         playerPrefab:cc.Prefab,
         bombPrefab:cc.Prefab,
-        maxLen:10 
+        monsterPrefab:cc.Prefab,
+        maxLen:10,
+        level:1
     },
     
 
@@ -15,6 +17,7 @@ cc.Class({
             [9,9],[9,9],[9,9],[9,9],[9,9],[9,9]
             ];
             this.walks= [[],[0,1],[0,-1],[-1,0],[1,0]];
+            this.monsterPos = [[0,0],[0,0],[0,0],[0,0],[0,0]];
         }
     },
 
@@ -28,12 +31,32 @@ cc.Class({
         this.playerCode = this.player.getComponent("Player");
         this.playerCode.initPlayerWithUrl(url);
     },
+
+      //初始化敌人
+    initMonster:function(i,j,url)
+    {
+        this.monsterpos = [i, j];
+        this.monster = cc.instantiate(this.monsterPrefab);
+        this.monster.parent = this.node ;
+        this.monster.on("loadComplete",this.loadMonsterComplete,this);
+        this.monsterCode = this.monster.getComponent("Monster");
+        this.monsterCode.initMonsterWithUrl(url);
+    },
+    
     
     loadComplete:function()
     {
         var self = this ;
         var direction = 1 ;
         self.playerCode.moveTo(self.revive[0],self.revive[1],direction);
+        
+    },
+
+    loadMonsterComplete:function()
+    {
+        var self = this ;
+        var direction = 1 ;
+        self.monsterCode.moveTo(self.monsterpos[0],self.monsterpos[1],direction);
         
     },
 
@@ -56,9 +79,13 @@ cc.Class({
             [9,9],[9,9],[9,9],[9,9],[9,9]
             ];
             this.walks= [[],[0,-1],[0,1],[-1,0],[1,0]];
+            this.monsterPos = [[0,0],[0,0],[0,0],[0,0],[0,0]];
         }
         var pos = this.revivePos[currentPass];
+        this.level = currentPass ; 
+        var monsterPos = this.monsterPos[currentPass];
         this.initPlayer(pos[0],pos[1],"");
+        this.initMonster(monsterPos[0],monsterPos[1],"");
     }, 
 
     //移动玩家到某个点
@@ -133,6 +160,7 @@ cc.Class({
             if(this.blocks[pos[0]] && this.blocks[pos[0]][pos[i]])
             {
                 var code = this.blocks[pos[0]][pos[i]] ;
+                // if(code is BombEffect)
                 code.bomb();
             }
 

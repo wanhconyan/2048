@@ -99,7 +99,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 70
+        "__id__": 75
       }
     ],
     "_prefab": null,
@@ -2434,6 +2434,9 @@
     "_children": [
       {
         "__id__": 65
+      },
+      {
+        "__id__": 71
       }
     ],
     "_rotationX": 0,
@@ -2513,6 +2516,9 @@
       },
       {
         "__id__": 69
+      },
+      {
+        "__id__": 70
       }
     ],
     "_prefab": null,
@@ -2570,7 +2576,108 @@
     "bombPrefab": {
       "__uuid__": "379104ae-d6df-4508-b755-ae5c30b0cad7"
     },
+    "monsterPrefab": {
+      "__uuid__": "8d8fa80e-293f-4ab0-a11c-dd6c1be4e7c7"
+    },
     "maxLen": 10
+  },
+  {
+    "__type__": "c84f6IBYJNKfpJgWbiI5JIV",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 65
+    },
+    "_enabled": true
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "BombEffect",
+    "_objFlags": 0,
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_cascadeOpacityEnabled": true,
+    "_parent": {
+      "__id__": 64
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 0,
+      "height": 0
+    },
+    "_children": [],
+    "_rotationX": 0,
+    "_rotationY": 0,
+    "_scaleX": 1,
+    "_scaleY": 1,
+    "_position": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 0
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "_localZOrder": 0,
+    "_globalZOrder": 0,
+    "_tag": -1,
+    "_opacityModifyRGB": false,
+    "_id": "57e90F0p9dIZ6qdE2YBLqmn",
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 72
+      },
+      {
+        "__id__": 73
+      }
+    ],
+    "_prefab": {
+      "__id__": 74
+    },
+    "groupIndex": 0
+  },
+  {
+    "__type__": "2aa445a2KJAbbiWsQ+C5c8M",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 71
+    },
+    "_enabled": true
+  },
+  {
+    "__type__": "cc.Animation",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 71
+    },
+    "_enabled": true,
+    "_defaultClip": null,
+    "_clips": [],
+    "playOnLoad": false
+  },
+  {
+    "__type__": "cc.PrefabInfo",
+    "root": {
+      "__id__": 71
+    },
+    "asset": {
+      "__uuid__": "f82b0f1d-1423-4073-82a0-013086e0915b"
+    },
+    "fileId": "57e90F0p9dIZ6qdE2YBLqmn",
+    "sync": false
   },
   {
     "__type__": "cc.Canvas",

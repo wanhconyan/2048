@@ -86,20 +86,11 @@ cc.Class({
         cc.loader.loadRes("Map/block/block", cc.SpriteAtlas, function (err, atlas) {
         var frame = atlas.getSpriteFrame('box'+style);
         sprite.spriteFrame = frame;
-        self.resize(sprite.spriteFrame.getRect())
         });
        
        
     },
 
-    //设置节点大小和碰撞体积
-    resize:function(size)
-    {
-        this.node.width = size.width;
-        this.node.height = size.height;
-        var box = this.getComponent(cc.BoxCollider);
-        box.size= size;
-    },
 
     //设置位置
     setPostion:function(i,j)

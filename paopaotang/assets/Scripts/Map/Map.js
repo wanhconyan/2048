@@ -12,6 +12,7 @@ cc.Class({
         this.titleLayer = this.getComponent("TileLayer");
         this.blockLayer = this.getComponent('BlockLayer');
         this.playerLayer = this.getComponent("PlayerLayer");
+        this.astar = this.getComponent("AStar") ;
         this.initMap(0,""); //最底层为tileMap层
         this.inputControl.game = this ;
     },

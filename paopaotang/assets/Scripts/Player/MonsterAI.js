@@ -56,7 +56,7 @@ cc.Class({
 
     
 
-    doSomeThing:function()
+    doSomeThing:function(){},
 
 
 

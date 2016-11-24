@@ -2579,7 +2579,9 @@
     "monsterPrefab": {
       "__uuid__": "8d8fa80e-293f-4ab0-a11c-dd6c1be4e7c7"
     },
-    "maxLen": 10
+    "maxLen": 10,
+    "level": 1,
+    "game": null
   },
   {
     "__type__": "c84f6IBYJNKfpJgWbiI5JIV",

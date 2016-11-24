@@ -22,7 +22,7 @@ cc.Class({
         this.moveLen = 60 ;
         this.heroAtlas = {};
         this.walks= [[],[0,-1],[0,1],[-1,0],[1,0]];
-        this.action = ["","monster_up","monster_down","monster_right","monster_left"];
+        this.action = ["","monster_up","monster_down","monster_left","monster_right"];
     },
 
      moveTo:function(i,j,direction)
@@ -33,6 +33,7 @@ cc.Class({
         this.changeDirection(direction);
         this.node.x = this.defX + this.i * this.moveLen ;
         this.node.y = this.defY - this.j * this.moveLen ;
+        console.log("monster moveTo" + this.node.x,this.node.y ,this.i ,this.j);
     },
 
      changeDirection:function(direction)

@@ -1,3 +1,9 @@
+const Map = require("Map");
+const TYPE = cc.Enum(
+    {
+        PLAYER:1,
+        MONSTER:2
+    })
 cc.Class({
     extends: cc.Component,
 
@@ -6,7 +12,8 @@ cc.Class({
         bombPrefab:cc.Prefab,
         monsterPrefab:cc.Prefab,
         maxLen:10,
-        level:1
+        level:1,
+        game:Map
     },
     
 
@@ -41,6 +48,10 @@ cc.Class({
         this.monster.on("loadComplete",this.loadMonsterComplete,this);
         this.monsterCode = this.monster.getComponent("Monster");
         this.monsterCode.initMonsterWithUrl(url);
+        this.monsterAi = this.monster.getComponent("MonsterAI");
+        this.monsterAi.astar = this.game.astar ;
+        this.monsterAi.map = this.game.blockLayer.blocks ;
+        this.monsterAi.aiProxy = this ;
     },
     
     
@@ -71,8 +82,9 @@ cc.Class({
     },
 
     //初始化玩家位置
-    initPass:function(currentPass,url)
+    initPass:function(currentPass,url,map)
     {   
+        this.game =map ;
          if(!this.revivePos )
         {
              this.revivePos = [
@@ -106,6 +118,10 @@ cc.Class({
         var walk = this.walks[direction];
         var offsetx = this.playerCode.i  + walk[0] ;
         var offsety =  this.playerCode.j  + walk[1] ;
+        if(!this.blocks)
+        {
+            this.blocks = this.game.blockLayer.blocks ;
+        }
         if(offsetx >= this.maxLen || offsety >= this.maxLen ||offsetx< 0 || offsety < 0 )
         {
             return false ;
@@ -118,11 +134,31 @@ cc.Class({
         
     },
 
-    //放置炸弹
-    putBomb:function()
+       //放置炸弹
+    putBomb:function(type)
     {
-        var i = this.playerCode.i;
-        var j = this.playerCode.j ;
+        var targetCode  ;
+        var target ;
+        var i ;
+        var j  ;
+        if(type == TYPE.PLAYER)
+        {
+            target = this.player ;
+            targetCode = this.playerCode ;
+            i = this.playerCode.i ;
+            j = this.playerCode.j ;
+        }
+        if(type == TYPE.MONSTER)
+        {
+            target = this.monster ;
+            targetCode = this.monsterCode ;
+            i = this.monsterCode.i ;
+            j = this.monsterCode.j ;
+        }
+        if(!this.blocks)
+        {
+            this.blocks = this.game.blockLayer.blocks ;
+        }
         if(this.blocks[i] && this.blocks[i][j])
         {
             return ;
@@ -130,8 +166,9 @@ cc.Class({
         var bomb = cc.instantiate(this.bombPrefab);
         var bombCode = bomb.getComponent("Bomb");
         bomb.parent = this.node ;
-        bomb.on("boomRound",this.boomRound)
-        bombCode.initBombWith(this.playerCode.i,this.playerCode.j,0);
+        bomb.emiter = target ;
+        bomb.on("boomRound",this.boomRound,this)
+        bombCode.initBombWith(targetCode.i,targetCode.j,0);
         if(!this.blocks[i])
         {
             this.blocks[i] = [];
@@ -148,7 +185,8 @@ cc.Class({
         bombCode.bomb();
         var round = bombCode.getBoomRound();
         var boomCenter = [bombCode.i,bombCode.j];
-        this.bombEveryThing(round) ; //
+        this.bombEveryThing(round) ; //炸毁周围对象
+        this.blocks[bombCode.i][bombCode.j] = null; 
     },
 
     //炸毁攻击范围内的节点

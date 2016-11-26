@@ -50,7 +50,7 @@ cc.Class({
                 {
                     bestNode.parentNode = node ;
                 }
-                console.log("最佳点"+bestNode.r,bestNode.c+"结束点"+this.endNode.r,this.endNode.c)
+                // console.log("最佳点"+bestNode.r,bestNode.c+"结束点"+this.endNode.r,this.endNode.c)
             } catch (error) {
                 console.log("findPath error!")
             }

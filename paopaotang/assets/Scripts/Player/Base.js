@@ -16,7 +16,7 @@ cc.Class({
         var frame = [];
         for(var i = 1; i <= frameCount ; i ++)
         {
-            console.log(key);
+            // console.log(key);
             var spriteFrame =  this.heroAtlas.getSpriteFrame(key +"_"+ i);
             frame.push(spriteFrame);
         }

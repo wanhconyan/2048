@@ -53,9 +53,7 @@ cc.Class({
 
     bomb:function()
     {
-        console.log("block is bombed");
-        this.node.active = false ;
-        this.game.blockLayer.blocks[this.i][this.j] = null; //清除位置信息
+        this.playBombEffect();
     },
 
     //播放爆炸特效
@@ -65,13 +63,19 @@ cc.Class({
         animation.active = true ;
         cc.loader.loadRes("Map/block/bomb", cc.SpriteAtlas, (err, atlas) => {
         var spriteFrames = atlas.getSpriteFrames();
-        
-        var clip = cc.AnimationClip.createWithSpriteFrames(spriteFrames, 12);
+        animation.on("playEnd",this.playEnd,this)
+        var clip = cc.AnimationClip.createWithSpriteFrames(spriteFrames, 6);
         clip.name = 'run';
         clip.wrapMode = cc.WrapMode.Default;
         animation.addClip(clip);
         animation.play('run');
         });
+    },
+
+    playEnd:function(target)
+    {
+        target.node.active = false ;
+        target.game.blockLayer.blocks[this.i][this.j] = null; //清除位置信息
     },
 
     //吃掉当前格子中的奖励 并销毁对象

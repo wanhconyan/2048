@@ -12,7 +12,7 @@ cc.Class({
         bombPrefab:cc.Prefab,
         monsterPrefab:cc.Prefab,
         effectPrefab:cc.Prefab,
-        maxLen:10,
+        maxLen:9,
         level:1,
         game:Map
     },
@@ -195,10 +195,9 @@ cc.Class({
             var pos = round[i];
             var oi = pos[0] ;
             var oj = pos[1];
-            if(this.blocks[pos[0]] && this.blocks[pos[0]][pos[i]])
+            if(this.blocks[pos[0]] && this.blocks[pos[0]][pos[1]])
             {
-                var code = this.blocks[pos[0]][pos[i]] ;
-                // if(code is BombEffect)
+                var code = this.blocks[oi][oj] ;
                 code.bomb();
             }
             if(oi < 0 || oi > this.maxLen || oj > this.maxLen || oj < 0)

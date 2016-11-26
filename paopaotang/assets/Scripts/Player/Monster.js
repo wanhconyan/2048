@@ -33,7 +33,7 @@ cc.Class({
         this.changeDirection(direction);
         this.node.x = this.defX + this.i * this.moveLen ;
         this.node.y = this.defY - this.j * this.moveLen ;
-        console.log("monster moveTo" + this.node.x,this.node.y ,this.i ,this.j);
+        // console.log("monster moveTo" + this.node.x,this.node.y ,this.i ,this.j);
     },
 
      changeDirection:function(direction)
@@ -67,7 +67,7 @@ cc.Class({
         var frame = [];
         for(var i = 1; i <= frameCount ; i ++)
         {
-            console.log(key);
+            // console.log(key);
             var spriteFrame =  this.heroAtlas.getSpriteFrame(key +"_"+ i);
             frame.push(spriteFrame);
         }

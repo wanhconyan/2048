@@ -73,6 +73,12 @@ cc.Class({
         this.monstercode.moveTo(node.r,node.c,direction)
     },
 
+    updatePosition:function()
+    {
+        
+
+    },
+
 
     //获取下一步行走方向
     getDirection:function(node)
@@ -116,8 +122,6 @@ cc.Class({
         var len = this.walkNodes.length ;
         var randomLen = Math.floor(Math.random()*len);
         var node = this.walkNodes[randomLen];
-        console.log("getRandomMovePos"+node.r,node.c);
         this.path = this.astar.findPath([this.monstercode.i,this.monstercode.j],[node.r,node.c]);
-        // this.path = this.astar.findPath([this.monstercode.i,this.monstercode.j],[1,0]);
     }
 });

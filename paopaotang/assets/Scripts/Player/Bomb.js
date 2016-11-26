@@ -35,7 +35,7 @@ cc.Class({
         this.j = j ;
         this.node.x = this.defX + this.i * this.boomWidth ;
         this.node.y = this.defY - this.j * this.boomWidth ;
-        console.log("bomb"+this.node.x,this.node.y,i,j);
+        // console.log("bomb"+this.node.x,this.node.y,i,j);
         let self = this ;
         var url = this.types[type];
         self.animation = this.getComponent(cc.Animation);

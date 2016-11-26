@@ -23,7 +23,7 @@ cc.Class({
     //移动玩家
     move:function(event,direction)
     {
-        console.log(direction) ;
+        // console.log(direction) ;
         this.game.move(direction);
     },
 

@@ -50,10 +50,12 @@ cc.Class({
 
     },    
 
+
     bomb:function()
     {
-        console.log("block is bombed")
-
+        console.log("block is bombed");
+        this.node.active = false ;
+        this.game.blockLayer.blocks[this.i][this.j] = null; //清除位置信息
     },
 
     //播放爆炸特效
@@ -76,6 +78,8 @@ cc.Class({
     biteReward:function()
     {
         this.node.active = false; 
+        this.game.blockLayer.blocks[i][j] = null ;
+
     },
 
     //设置格子样式，并为格子设置格子碰撞体积
@@ -98,6 +102,7 @@ cc.Class({
       this.node.x = i * this.defW + this.defX ;
       this.node.y= -j * this.defH + this.defY ;
       this.pos.string = i + "," + j ;
+      this.i = i ; this.j = j ;
     },
 
 });

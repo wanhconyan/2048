@@ -1,0 +1,17 @@
+{
+  "excludeScenes": [],
+  "includeAnySDK": false,
+  "includeSdk": [
+    "anysdk"
+  ],
+  "orientation": {
+    "landscapeLeft": false,
+    "landscapeRight": false,
+    "portrait": true,
+    "upsideDown": false
+  },
+  "packageName": "org.cocos2d.paopaotang",
+  "startScene": "48ee5219-dcd3-47c3-9cf7-edfd02b3844c",
+  "title": "paopaotang",
+  "webOrientation": "landscape"
+}

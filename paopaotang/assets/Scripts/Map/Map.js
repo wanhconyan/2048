@@ -24,7 +24,7 @@ cc.Class({
     {
         this.level = level ;
         this.titleLayer.initPass(this.level);
-        this.blockLayer.initPass(this.level);
+        this.blockLayer.initPass(this.level,this);
         this.playerLayer.initPass(this.level,url,this);
     },
 

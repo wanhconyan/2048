@@ -11,6 +11,7 @@ cc.Class({
         playerPrefab:cc.Prefab,
         bombPrefab:cc.Prefab,
         monsterPrefab:cc.Prefab,
+        effectPrefab:cc.Prefab,
         maxLen:10,
         level:1,
         game:Map
@@ -118,10 +119,7 @@ cc.Class({
         var walk = this.walks[direction];
         var offsetx = this.playerCode.i  + walk[0] ;
         var offsety =  this.playerCode.j  + walk[1] ;
-        if(!this.blocks)
-        {
-            this.blocks = this.game.blockLayer.blocks ;
-        }
+        this.blocks = this.game.blockLayer.blocks ;
         if(offsetx >= this.maxLen || offsety >= this.maxLen ||offsetx< 0 || offsety < 0 )
         {
             return false ;
@@ -195,15 +193,23 @@ cc.Class({
         for(var i = 0 ; i < round.length ; i ++ )
         {
             var pos = round[i];
+            var oi = pos[0] ;
+            var oj = pos[1];
             if(this.blocks[pos[0]] && this.blocks[pos[0]][pos[i]])
             {
                 var code = this.blocks[pos[0]][pos[i]] ;
                 // if(code is BombEffect)
                 code.bomb();
             }
-
+            if(oi < 0 || oi > this.maxLen || oj > this.maxLen || oj < 0)
+            {
+                continue ;
+            }
+            var effect = cc.instantiate(this.effectPrefab);
+            var effectCode = effect.getComponent("BombEffect");
+            effect.parent = this.node ;
+            effectCode.initBomb(oi,oj,0);
         }
-
     }
     
 });

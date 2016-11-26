@@ -17,7 +17,7 @@ cc.Class({
 
   
     //在i,j节点生产一个type类型的炸弹
-    initBomb:function(i,j,type,target)
+    initBomb:function(i,j,type)
     {
         this.bombUrls = ["Hero/bombEffect"];
         this.bombType = ["center", "center"];
@@ -26,7 +26,6 @@ cc.Class({
         var url = this.bombUrls[0];
         this.node.x = this.defX + this.i * this.defW ;
         this.node.y = this.defY - this.j * this.defH ;
-        this.node.parent = target ;
         let self = this ;
         self.animation = this.getComponent(cc.Animation);
         self.animation.active = true ;
@@ -61,8 +60,15 @@ cc.Class({
             this.createAnimationClips(key,5);
         }
         this.animation.play(key);
-        setTimeout(function() {
-            this.node.active = false ;
-        }, 2000,this);
+        setTimeout(this.hideEffect, 2000,this);
+    },
+
+
+    //爆炸 并通知爆炸范围
+    hideEffect:function(target)
+    {
+        target.node.active = false;
+        var sprite = target.getComponent(cc.Sprite);
+        sprite.node.active  = false ;
     },
 });

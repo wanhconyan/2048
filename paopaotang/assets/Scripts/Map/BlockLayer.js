@@ -11,7 +11,7 @@ cc.Class({
 
     },
 
-    initPass:function(currentPass)
+    initPass:function(currentPass,game)
     {
         if(!this.passNode)
         {
@@ -19,6 +19,6 @@ cc.Class({
             this.blockTile.parent = this.node ;
         }
         var blockTileCode = this.blockTile.getComponent("BlockTile");
-        blockTileCode.initBlockByPass(currentPass,this.node,this.blocks);
+        blockTileCode.initBlockByPass(currentPass,this.node,this.blocks,game);
     }
 });

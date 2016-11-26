@@ -74,7 +74,7 @@ cc.Class({
 
 
      //手动创建tileMap背景层
-    initBlockByPass:function(pass,node,blocks)
+    initBlockByPass:function(pass,node,blocks,game)
     {
         let blockInfo = this.blocks[pass];
         let len = blockInfo.length ;
@@ -93,6 +93,7 @@ cc.Class({
                 var nodeCode = block.getComponent("Block");
                 nodeCode.setBoxStyle(style);
                 nodeCode.setPostion(i,j);
+                nodeCode.game = game ;
                 blocks[i][j] = nodeCode ;
             }
         }

@@ -113,7 +113,7 @@
     "_tag": -1,
     "_opacityModifyRGB": false,
     "_id": "",
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 3
@@ -152,7 +152,7 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "3fd8fTVvwtBEqwkbaNbnLfd",
+    "fileId": "f1952tXkDdGgJQofNS4jwHA",
     "sync": false
   },
   {
@@ -216,7 +216,7 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "fed17Ta2JhC3qmyxR0sFzom",
+    "fileId": "372fabPDRpLb5P+VzYxJO7a",
     "sync": false
   }
 ]

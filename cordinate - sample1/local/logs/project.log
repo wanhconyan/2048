@@ -1,49 +1,49 @@
-2016-11-26T04:30:26.061Z - normal: Load ~/.CocosCreator/settings.json
-2016-11-26T04:30:26.066Z - normal: checking language setting...
-2016-11-26T04:30:26.066Z - normal: Language: en
-2016-11-26T04:30:26.096Z - success: protocol editor-framework registered
-2016-11-26T04:30:26.096Z - success: protocol app registered
-2016-11-26T04:30:26.096Z - success: protocol packages registered
-2016-11-26T04:30:26.096Z - success: protocol theme registered
-2016-11-26T04:30:26.097Z - success: protocol unpack registerred
-2016-11-26T04:30:26.505Z - normal: connected!
-2016-11-26T04:30:26.509Z - normal: Check project /Developments/workspace/cocos2d/cordinate - sample1
-2016-11-26T04:30:26.512Z - normal: Initializing Cocos Creator Editor
-2016-11-26T04:30:26.991Z - normal: Initializing Cocos2d
-2016-11-26T04:30:27.208Z - normal: Initializing Asset Database
-2016-11-26T04:30:27.235Z - success: protocol uuid registerred
-2016-11-26T04:30:27.235Z - success: protocol db registerred
-2016-11-26T04:30:27.235Z - success: protocol thumbnail registerred
-2016-11-26T04:30:27.235Z - normal: Loading editor/builtin packages
-2016-11-26T04:30:27.369Z - success: assets loaded
-2016-11-26T04:30:27.374Z - success: builder loaded
-2016-11-26T04:30:27.384Z - success: hierarchy loaded
-2016-11-26T04:30:27.390Z - success: inspector loaded
-2016-11-26T04:30:27.391Z - success: keystore loaded
-2016-11-26T04:30:27.398Z - success: node-library loaded
-2016-11-26T04:30:27.402Z - success: preferences loaded
-2016-11-26T04:30:27.422Z - success: project-importer loaded
-2016-11-26T04:30:27.426Z - success: project-settings loaded
-2016-11-26T04:30:27.431Z - success: ui-kit loaded
-2016-11-26T04:30:27.438Z - success: ui-grid loaded
-2016-11-26T04:30:27.446Z - success: scene loaded
-2016-11-26T04:30:27.447Z - success: sprite-editor loaded
-2016-11-26T04:30:27.453Z - success: timeline loaded
-2016-11-26T04:30:27.453Z - normal: Loading builtin packages
-2016-11-26T04:30:27.458Z - success: asset-db-debugger loaded
-2016-11-26T04:30:27.461Z - success: cocos-package loaded
-2016-11-26T04:30:27.463Z - success: code-editor loaded
-2016-11-26T04:30:27.464Z - success: color-picker loaded
-2016-11-26T04:30:27.468Z - success: console loaded
-2016-11-26T04:30:27.473Z - success: package-manager loaded
-2016-11-26T04:30:27.479Z - success: tester loaded
-2016-11-26T04:30:27.483Z - success: ui-kit-preview-extra loaded
-2016-11-26T04:30:27.487Z - success: ui-kit-preview loaded
-2016-11-26T04:30:27.490Z - success: ui-tree loaded
-2016-11-26T04:30:27.522Z - normal: Initializing project /Developments/workspace/cocos2d/cordinate - sample1
-2016-11-26T04:30:27.525Z - normal: Loading packages
-2016-11-26T04:30:27.537Z - normal: Watching packages
-2016-11-26T04:30:27.549Z - normal: Run Application
-2016-11-26T04:30:28.635Z - success: preview server running at http://localhost:7456
-2016-11-26T04:30:32.051Z - normal: 1.3.1
-2016-11-26T04:33:57.891Z - info: shutdown preview server
+2016-12-16T17:16:11.967Z - normal: Load ~/.CocosCreator/settings.json
+2016-12-16T17:16:11.977Z - normal: checking language setting...
+2016-12-16T17:16:11.978Z - normal: Language: en
+2016-12-16T17:16:12.026Z - success: protocol editor-framework registered
+2016-12-16T17:16:12.026Z - success: protocol app registered
+2016-12-16T17:16:12.027Z - success: protocol packages registered
+2016-12-16T17:16:12.027Z - success: protocol theme registered
+2016-12-16T17:16:12.027Z - success: protocol unpack registerred
+2016-12-16T17:16:12.388Z - normal: connected!
+2016-12-16T17:16:12.393Z - normal: Check project /Developments/workspace/cocos2d/cordinate - sample1
+2016-12-16T17:16:12.396Z - normal: Initializing Cocos Creator Editor
+2016-12-16T17:16:13.015Z - normal: Initializing Cocos2d
+2016-12-16T17:16:13.241Z - normal: Initializing Asset Database
+2016-12-16T17:16:13.277Z - success: protocol uuid registerred
+2016-12-16T17:16:13.278Z - success: protocol db registerred
+2016-12-16T17:16:13.278Z - success: protocol thumbnail registerred
+2016-12-16T17:16:13.279Z - normal: Loading editor/builtin packages
+2016-12-16T17:16:13.582Z - success: assets loaded
+2016-12-16T17:16:13.588Z - success: builder loaded
+2016-12-16T17:16:13.596Z - success: hierarchy loaded
+2016-12-16T17:16:13.603Z - success: inspector loaded
+2016-12-16T17:16:13.604Z - success: keystore loaded
+2016-12-16T17:16:13.610Z - success: node-library loaded
+2016-12-16T17:16:13.616Z - success: preferences loaded
+2016-12-16T17:16:13.640Z - success: project-importer loaded
+2016-12-16T17:16:13.645Z - success: project-settings loaded
+2016-12-16T17:16:13.650Z - success: ui-kit loaded
+2016-12-16T17:16:13.656Z - success: ui-grid loaded
+2016-12-16T17:16:13.663Z - success: scene loaded
+2016-12-16T17:16:13.664Z - success: sprite-editor loaded
+2016-12-16T17:16:13.672Z - success: timeline loaded
+2016-12-16T17:16:13.672Z - normal: Loading builtin packages
+2016-12-16T17:16:13.680Z - success: asset-db-debugger loaded
+2016-12-16T17:16:13.684Z - success: cocos-package loaded
+2016-12-16T17:16:13.686Z - success: code-editor loaded
+2016-12-16T17:16:13.690Z - success: color-picker loaded
+2016-12-16T17:16:13.699Z - success: console loaded
+2016-12-16T17:16:13.704Z - success: package-manager loaded
+2016-12-16T17:16:13.710Z - success: tester loaded
+2016-12-16T17:16:13.713Z - success: ui-kit-preview-extra loaded
+2016-12-16T17:16:13.718Z - success: ui-kit-preview loaded
+2016-12-16T17:16:13.722Z - success: ui-tree loaded
+2016-12-16T17:16:13.774Z - normal: Initializing project /Developments/workspace/cocos2d/cordinate - sample1
+2016-12-16T17:16:13.776Z - normal: Loading packages
+2016-12-16T17:16:13.783Z - normal: Watching packages
+2016-12-16T17:16:13.798Z - normal: Run Application
+2016-12-16T17:16:14.833Z - success: preview server running at http://localhost:7459
+2016-12-16T17:16:22.468Z - normal: 1.3.1
+2016-12-16T17:18:56.704Z - info: shutdown preview server

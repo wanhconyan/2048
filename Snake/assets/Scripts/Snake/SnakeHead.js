@@ -4,14 +4,18 @@ cc.Class({
     extends: Base,
 
     properties: {
-       
+       nikeName:
+       {
+           type:cc.Label,
+           default:null
+       }
     },
 
   
     onLoad: function () {
         this.toAngle = 0; 
         this.angle = 0 ;
-        this.speed = 4;
+        this.speed = 4 ;
     },
 
     moveTo:function(angle)
@@ -57,16 +61,39 @@ cc.Class({
 
   turnAround:function() {
       
-      this.node.rotation = this.toAngle - 90 ; ;
+      let rotation = this.toAngle ;
+      while(rotation < 0 )
+      {
+          rotation += 360 ;
+      }
+      
+      if(rotation > 90 && rotation < 180)
+      {
+          rotation = rotation + 180 ;
+      }
+      if(rotation > 270 && rotation < 360)
+      {
+          rotation = rotation - 180 ;
+      }
 
+      this.node.rotation = rotation  ;
+      console.log(rotation) ;
   },
+
+    translateToSnakeCornate:function(angle)
+    {
+        
+
+        return angle ;
+    },
+
     update:function(t)
     {
         this.turnAround();
         this.velocity();
         this.node.x += this.vx ;
         this.node.y += this.vy ;
-        // console.log("snakeHead : " + this.node.x ,this.node.y)
+        console.log("snake:" + this.node.x,this.node.y);
     }
      
 });

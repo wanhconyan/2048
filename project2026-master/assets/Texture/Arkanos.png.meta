@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "93b6fc67-6aaa-43da-9f52-5581273b544f",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "Arkanos": {
+      "ver": "1.0.3",
+      "uuid": "7ba13825-995b-4bdf-97c1-78ded728ac1f",
+      "rawTextureUuid": "93b6fc67-6aaa-43da-9f52-5581273b544f",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 1280,
+      "height": 1280,
+      "rawWidth": 1280,
+      "rawHeight": 1280,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

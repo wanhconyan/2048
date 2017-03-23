@@ -5,7 +5,7 @@
     "anysdk"
   ],
   "orientation": {
-    "landscapeLeft": false,
+    "landscapeLeft": true,
     "landscapeRight": false,
     "portrait": true,
     "upsideDown": false

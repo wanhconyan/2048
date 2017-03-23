@@ -4,33 +4,24 @@ cc.Class({
     properties: {
         defH:80,
         defW:160,
-        stageX:0,
-        stageY:0
+        nodeState:
+        {
+            default:null,
+            type:cc.Label
+        }
     },
 
 
     onLoad: function () {
-
     },
 
 
     //设置位置
-    setPostion:function(i,j)
+    setPostion:function(i,j,index)
     {
-      this.node.x = ~~(i * this.defW + this.stageX + this.defW/2) ;
-      this.node.y= ~~(j * this.defH + this.stageY + this.defH/2) ;
+      this.node.x =  i * this.defW;
+      this.node.y=   j * this.defH;
+      this.nodeState.String = i + ":" + j ;
       console.log(this.node.x , this.node.y);
     },
-
-    show:function()
-    {
-        this.node.active = true ;
-    },
-
-    hide:function()
-    {
-        this.node.active = false;
-    }
-
-
 });

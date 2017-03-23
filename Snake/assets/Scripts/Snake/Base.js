@@ -18,8 +18,6 @@ cc.Class({
     },
     },
 
-  
-    
     //初始化蛇形状
     init:function(data)
     {
@@ -30,21 +28,4 @@ cc.Class({
     onLoad: function () {
 
     },
-
-    
-
-    render:function()
-    {
-        
-
-    },
-
-   
-
-    update:function(t)
-    {
-        this.node.x += this.vx ;
-        this.node.y += this.vy ;
-    }
-        
 });
